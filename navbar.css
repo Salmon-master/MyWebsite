@@ -1,0 +1,87 @@
+@import url("style.css");
+
+:root{
+    --main-time: 1s;
+}
+
+.navbar {
+    transition: width var(--main-time) ease-in-out;
+    width: 0px;
+    background-color: var(--bg);
+    display:run-in;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+}
+.navbar.open{
+    width: 25rem;
+    transition: width var(--main-time) ease-in-out;
+}
+
+.navbar a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateX(-25rem);
+    transition: all var(--main-time) ease-in-out;
+    width: 18.75rem;
+    color: var(--text);
+}
+.navbar a.open:not(.logo):hover{
+    background-color: var(--bg-light);
+    transition: background-color 0.3s ease-in-out;
+    transition: scale 0.4s ease-in-out;
+    scale: 1.03;
+}
+.navbar a.open{
+    transform: translateX(0px);
+    transition: transform var(--main-time) ease-in-out;
+}
+
+.logo{
+    color: var(--text-muted);
+}
+
+
+
+
+
+
+.menu-btn {
+    cursor: pointer;
+    transition: all var(--main-time) ease-in-out;
+    margin-top: 3vh;
+    margin-left: 3vh;
+    position: absolute;
+    height: 23px;
+    transform: translateX(0px);
+}
+
+.menu-btn .btn-line {
+    width: 23px;
+    height: 1px;
+    border-radius: 3px;
+    border: var(--text-muted) 1px solid;
+    margin: 0 0 5px 0;
+    background: var(--text-muted);
+    transition: all var(--main-time) ease-in-out;
+}
+
+.menu-btn.close {
+    /* transform: rotate(180deg); */
+    transform: translateX(20.5rem);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+    transform: translate(0, 7px) rotate(45deg);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+    transform: translate(0, -7px) rotate(-45deg);
+}
