@@ -7,7 +7,8 @@
 .navbar {
     transition: width var(--main-time) ease-in-out;
     width: 0px;
-    background-color: var(--bg);
+    background-color: color-mix(in srgb, var(--bg), transparent 15%);
+    backdrop-filter: blur(30px);
     display:run-in;
     position: sticky;
     top: 0;
@@ -26,7 +27,7 @@
     font-size: 2rem;
     transform: translateX(-25rem);
     transition: all var(--main-time) ease-in-out;
-    width: 18.75rem;
+    width: 22.3rem;
     color: var(--text);
 }
 .navbar a.open:not(.logo):hover{
@@ -39,14 +40,6 @@
     transform: translateX(0px);
     transition: transform var(--main-time) ease-in-out;
 }
-
-.logo{
-    color: var(--text-muted);
-}
-
-
-
-
 
 
 .menu-btn {
@@ -84,4 +77,10 @@
 
 .menu-btn.close .btn-line:nth-child(3) {
     transform: translate(0, -7px) rotate(-45deg);
+}
+
+.navbar a.logo {
+    color: var(--text-muted);
+    font-weight: 300;
+    width: 18rem;
 }
