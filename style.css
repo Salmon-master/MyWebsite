@@ -46,7 +46,7 @@ h1 {
     font-size: 8rem;
     color: var(--text);
     font-weight: 900;
-    /* position: absolute; */
+    position: absolute;
     z-index: -10;
     
 }
@@ -274,4 +274,13 @@ img {
 
 .fade {
     display: none;
+}
+
+.main-body{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 80vw;
 }

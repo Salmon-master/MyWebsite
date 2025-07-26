@@ -9,7 +9,7 @@
     width: 0px;
     background-color: color-mix(in srgb, var(--bg), transparent 15%);
     backdrop-filter: blur(30px);
-    display:run-in;
+    display: inline-block;
     position: sticky;
     top: 0;
     z-index: 1000;
