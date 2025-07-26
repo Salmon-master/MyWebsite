@@ -46,7 +46,7 @@ h1 {
     font-size: 8rem;
     color: var(--text);
     font-weight: 900;
-    position: absolute;
+    /* position: absolute; */
     z-index: -10;
     
 }
@@ -83,7 +83,7 @@ p {
 }
 
 .info_block {
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
     /* border: 1px, solid var(--border); */
     border-radius: 10px;
     width: 70vw;
@@ -131,6 +131,7 @@ p {
     z-index: -1;
     background: none;
     top: 0;
+    text-align: left;
 }
 
 .subtitle {
