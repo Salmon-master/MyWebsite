@@ -12,70 +12,79 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 </head>
 
 <body>
-
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <div>
         <div class="navbar">
             <div class="menu-btn" onclick="onToggle()">
                 <div class="btn-line"></div>
                 <div class="btn-line"></div>
                 <div class="btn-line"></div>
             </div>
-            <a href="index.html" class="logo menu-item" >Hugh Thompson</a>
+            <a href="index.html" class="logo menu-item">Hugh Thompson</a>
             <a href="portfolio.html" class="menu-item">Portfolio</a>
             <a href="" class="menu-item">My Services</a>
             <a href="" class="menu-item">Blog</a>
             <a href="" class="menu-item">Contact</a>
         </div>
-        
-        <div class="title">
-            <h1 class="statement">Hi,<br> I'm Hugh Thompson</h1>
 
-        </div>
-        <div class="subtitle">
-            <p><i class="scroll-down" id="arrow"></i></p>
-        </div>
+        <div class="parallax" id="parallax">
+            <div class="background">
+                <h1 class="statement">Hi,<br> I'm Hugh Thompson</h1>
 
-    <div class="wrapper">
+            </div>
+            <div class="subtitle foreground" style="top : 85vh;">
+                <p><i class="scroll-down" id="arrow"></i></p>
+            </div>
 
-        <div class="info_block">
-            <img src="assets/placeholder_headshot.jpg" alt="A business headhsot of Hugh Thompson" style="width: 250px;">
-            <div class="container" style=" align-self: flex-start;">
-                <div>
-                    <h2>About Me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae vel quam
-                        dignissimos
-                        modi explicabo et nobis vero exercitationem adipisci, optio voluptatum maxime quaerat eaque
-                        corrupti
-                        harum. Alias, vel harum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
-                        repellat
-                        sed eius reprehenderit ratione? Perspiciatis exercitationem dolor esse in maxime ea labore
-                        vel
-                        praesentium! Illum aliquid libero quas consequuntur quidem.
-                    </p>
+
+
+            <div class="info_block foreground" style="top: 90vh;">
+                <img src="assets/placeholder_headshot.jpg" alt="A business headhsot of Hugh Thompson"
+                    style="max-width: 250px;">
+                <div class="container" style=" align-self: flex-start;">
+                    <div>
+                        <h2>About Me</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae vel quam
+                            dignissimos
+                            modi explicabo et nobis vero exercitationem adipisci, optio voluptatum maxime quaerat
+                            eaque
+                            corrupti
+                            harum. Alias, vel harum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+                            repellat
+                            sed eius reprehenderit ratione? Perspiciatis exercitationem dolor esse in maxime ea
+                            labore
+                            vel
+                            praesentium! Illum aliquid libero quas consequuntur quidem.
+                        </p>
+                    </div>
+                    <div class="button">A button</div>
                 </div>
-                <div class="button">A button</div>
+
+
+
             </div>
         </div>
-
-        <div class="info_block">
-            <img src="" alt="">
-            
-        </div>
     </div>
-    <div class="footer">
+    <!-- <div class="footer">
         <a href=""><img src="assets\InBug-Black.png" alt="LinkedIn Logo" class="footer-logo"></a>
         <a href=""><img src="assets\mail-icon-black-5-2152404370.jpg" alt="mail icon" class="footer-logo"></a>
         <br>
         <div style="font-size: 0.7rem;">
             © 2025 Hugh Thompson Made with using HTML, CSS, and JavaScript
-
+            
         </div>
-    </div>
+    </div> -->
 </body>
-<script src="main.js"></script>
+<script src="index.js"></script>
 
 </html>

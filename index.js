@@ -2,7 +2,22 @@
 // This script adds a fade effect to an arrow icon when the page is scrolled
 // OnScroll event handler
 
+const arrow = document.getElementById("arrow")
 
+var scroll_element = document.getElementById("parallax");
+
+const myFunction = () => {
+    var scroll = scroll_element.scrollTop;
+    // If scroll value is more than 0 - means the page is scrolled, add or remove class based on thatS
+    arrow.classList.remove("fade");
+    if (scroll > 0) {
+        arrow.classList.add("fade");
+
+    } else {
+        arrow.classList.remove("fade");
+
+    }
+}
 // Toggle menu visibility
 // This function toggles the visibility of the menu when the menu button is clicked
 let show = false;
@@ -27,18 +42,18 @@ function onToggle() {
     }
 }
 // Use the function
+arrow.addEventListener("animationiteration", myFunction);
 
 
 
 // When the user scrolls the page, execute myFunction
 
-window.addEventListener('scroll', (event) => {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+scroll_element.addEventListener('scroll', (event) => {
+    console.log("scrolling", scroll_element.scrollTop);
+    var winScroll = scroll_element.scrollTop;
+    var height = scroll_element.scrollHeight - scroll_element.clientHeight;
     var scrolled = (winScroll / height) * 100;
-    console.log(window.getComputedStyle(document.getElementById("myBar")).getPropertyValue("width"), scrolled);
     // handle the scroll event 
-    console.log(String(scrolled));
     document.getElementById("myBar").style.width = scrolled + "%";
 });
 

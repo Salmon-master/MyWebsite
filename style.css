@@ -15,57 +15,72 @@
     --success: hsl(146 17% 59%);
     --info: hsl(217 28% 65%);
 }
-html {
-  overflow: hidden;
-  height: 100%;
-  font-size: 16px;
-  line-height: 1.0;
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
+html {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.0;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: var(--bg-dark);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     html {
-    font-size: 12px;
-    line-height: 1.2;
+        font-size: 12px;
+        line-height: 1.2;
+    }
 }
-}
+
 
 body {
     font-family: var(--font-roboto);
-    
     background-color: var(--bg-dark);
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    /* min-height: 100vh; */
 }
-
 
 h1 {
-    font-size: 8rem;
+    font-size: 5rem;
     color: var(--text);
     font-weight: 900;
-    position: absolute;
     z-index: -10;
-    
+
 }
-.statement{
-    transform: translateZ(-1px) scale(1.2) translate(0%, -25%);
+
+.statement {
+    vertical-align: middle;
+    /* transform: translateZ(-1px) scale(1.2) translate(0%, -25%); */
     animation: fadeInAnimation 3s;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards
+    animation-fill-mode: forwards;
+    margin: auto;
+    width:min-content;
+    top: calc(50vh - 10rem);
+    position: relative;
 }
-@keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
 
-            100% {
-                opacity: 1;
-            }
-        }
+
 
 h2 {
     font-size: 3rem;
@@ -83,23 +98,23 @@ p {
 }
 
 .info_block {
-    /* background-color: var(--bg); */
+    background-color: var(--bg-dark);
     /* border: 1px, solid var(--border); */
     border-radius: 10px;
-    width: 70vw;
-    margin: 2vh;
+    max-width: 70vw;
+    margin: max(15vw, 50px);
     padding: 4vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-width: 287px;
+    top: 300px;
 }
 
 @media (max-width: 1000px) {
     .info_block {
         flex-direction: column;
-         width: 60vw;
+        width: 60vw;
     }
 }
 
@@ -120,28 +135,64 @@ p {
     background-color: var(--secondary);
 }
 
+
+
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
-    position: fixed;
+    position: absolute;
     width: 100%;
     transform-style: inherit;
     z-index: -1;
     background: none;
     top: 0;
     text-align: left;
+
 }
+
+.parallax {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    perspective: 3px;
+    perspective-origin: 50%;
+    height: 100vh;
+    width: 100vw;
+}
+.parallax::-webkit-scrollbar {
+    display: none;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    scale: 1;
+    scale: 2;
+    transform: translateZ(-3px);
+}
+
+.foreground {
+    margin-top: auto;
+    margin-bottom: 50px;
+    transform-origin: 0;
+    transform: translateZ(0px);
+    position: relative;
+}
+
 
 .subtitle {
     display: flex;
-    position: static;
     justify-content: center;
     align-items: center;
-    height:  10vh;
-    background:none;
-    transform: translate(0, -15vh);
+    height: 10vh;
+    background: none;
 }
 
 .wrapper {
@@ -149,10 +200,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     width: 100%;
-    position: relative;
-    transform-style: inherit;
     background-color: var(--bg-dark);
     z-index: 0;
 }
@@ -184,7 +232,7 @@ img {
     display: block;
 }
 
-.footer-logo{
+.footer-logo {
     width: 30px;
     height: 30px;
     vertical-align: middle;
@@ -276,11 +324,15 @@ img {
     display: none;
 }
 
-.main-body{
+.main-body {
     position: absolute;
     top: 0;
     margin: 0;
     padding-left: 10vw;
     padding-right: 10vw;
+    padding-top: 10vh;
     width: 80vw;
 }
+
+
+/* width */
