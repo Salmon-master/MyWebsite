@@ -57,6 +57,7 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
+    border-radius: 0;
 }
 
 h1 {
@@ -230,6 +231,7 @@ img {
     padding: 1rem;
     font-size: 1.2rem;
     display: block;
+    position: static;
 }
 
 .footer-logo {

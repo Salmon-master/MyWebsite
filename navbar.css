@@ -99,13 +99,13 @@
 
 .progress-container {
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: var(--bg-dark);
 }
 
 
 .progress-bar {
-  height: 4px;
+  height: 2px;
   background: var(--text-muted);
   width: 0px;
 }
