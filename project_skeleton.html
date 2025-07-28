@@ -46,21 +46,16 @@
         </div>
     </div>
 </body>
+<script src="main.js"></script>
 <script>
-    window.addEventListener('message', (event) => {
-    // IMPORTANT: check the origin of the data!
-    console.log("Message received from:", event.origin);
-    if (event.origin === "portfolio.html") {
-        // The data was sent from your site.
-        // Data sent with postMessage is stored in event.data:
-        document.getElementById("content").innerHTML = event.data;
-    } else {
-        // The data was NOT sent from your site!
-        // Be careful! Do not use it. This else branch is
-        // here just for clarity, you usually shouldn't need it.
-        return;
-    }
-});
+    window.onload = function() {
+        // This will be called when the window is fully loaded
+        console.log("Window loaded");
+        var params = new URLSearchParams(window.location.search);
+        var message = params.get('message') || 'No message provided';
+        document.getElementById("content").innerHTML = `<h1>${message}</h1>`;
+    };
+    
 </script>
 
 </html>
