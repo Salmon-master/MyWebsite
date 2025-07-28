@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    <link rel="stylesheet" href="project-grid.css">
+</head>
+<body>
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <div>
+
+        <div class="navbar">
+            <div class="menu-btn" onclick="onToggle()">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+            <a href="index.html" class="logo menu-item">Hugh Thompson</a>
+            <a href="portfolio.html" class="menu-item">Portfolio</a>
+            <a href="" class="menu-item">My Services</a>
+            <a href="" class="menu-item">Blog</a>
+            <a href="" class="menu-item">Contact</a>
+        </div>
+
+        <div class="main-body">
+            <div id="content">
+
+            </div>
+            
+        </div>
+        
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener('message', (event) => {
+    // IMPORTANT: check the origin of the data!
+    console.log("Message received from:", event.origin);
+    if (event.origin === "portfolio.html") {
+        // The data was sent from your site.
+        // Data sent with postMessage is stored in event.data:
+        document.getElementById("content").innerHTML = event.data;
+    } else {
+        // The data was NOT sent from your site!
+        // Be careful! Do not use it. This else branch is
+        // here just for clarity, you usually shouldn't need it.
+        return;
+    }
+});
+</script>
+
+</html>
