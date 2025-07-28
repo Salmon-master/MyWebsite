@@ -4,7 +4,7 @@ import yaml from 'https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm'
 
 function openProject(index) {
     var params = new URLSearchParams();
-    params.append("message", projects[index].page);
+    params.append("project_name", projects[index].page);
     var url = "project_skeleton.html?" + params.toString();
     var new_window = window.open(url, "_self");
 
@@ -26,7 +26,7 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 `
-console.log(FileList.)
+
 
 
 class ClassName {

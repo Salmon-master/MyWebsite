@@ -58,10 +58,16 @@
 <script>
     window.onload = function () {
         // This will be called when the window is fully loaded
+        const meta = {} // may be pre-populated with defaults
+        const markdown = markdownIt().use(metadata_block, {
+            parseMetadata: yaml.parse,
+            meta
+        })
         console.log("Window loaded");
         var params = new URLSearchParams(window.location.search);
-        var message = params.get('message') || 'No message provided';
-        document.getElementById("content").innerHTML = `<h1>${message}</h1>`;
+        var project_name = params.get('project_name') || 'No message provided';
+
+        document.getElementById("content").innerHTML = `${message}`;
     };
 
 </script>
