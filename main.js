@@ -38,7 +38,6 @@ window.addEventListener('scroll', (event) => {
     var scrolled = (winScroll / height) * 100;
     console.log(window.getComputedStyle(document.getElementById("myBar")).getPropertyValue("width"), scrolled);
     // handle the scroll event 
-    console.log(String(scrolled));
     document.getElementById("myBar").style.width = scrolled + "%";
 });
 

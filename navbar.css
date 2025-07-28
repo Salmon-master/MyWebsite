@@ -10,7 +10,7 @@
     background-color: color-mix(in srgb, var(--bg), transparent 15%);
     backdrop-filter: blur(30px);
     display: inline-block;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000; /* Lower than header */
     height: 100vh;
@@ -40,6 +40,7 @@
     transform: translateX(0px);
     transition: transform var(--main-time) ease-in-out;
 }
+
 
 
 .menu-btn {
