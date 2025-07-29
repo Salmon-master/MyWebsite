@@ -1,6 +1,7 @@
 ---
 title : 2024 NCEA scolarship Project
-description: The cashmere high school digitech department had a problem with a general lack of knowlage within the school as to what the department actually does, resulting in a general ignorance and lack of reconistion of student achivment. I set out to solve this problem as a part of my 2024 NCEA scolarship.
+description: My sumbission to the 2024 NCEA scolarship was to build a game cabinet to advertise the Cashmere high school digitech department
 id: 2024CHSCAB
 img: assets\cabinet.jpeg
+date: 2/12/2024
 ...

@@ -2,6 +2,7 @@
 title : Test Project
 description: a breif description
 id: testproj
+date: 1/1/1
 ...
 
 

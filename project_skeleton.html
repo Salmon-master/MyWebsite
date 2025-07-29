@@ -63,9 +63,10 @@
         var project_id = params.get('project_id') || 'No message provided';
         
         let proj = new Project(project_id);
-        console.log("Project: ", proj);
 
         document.getElementById("content").innerHTML = `${proj.page}`;
+
+
     };
 
 </script>
