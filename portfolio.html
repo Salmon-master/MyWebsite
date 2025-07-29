@@ -45,13 +45,47 @@
 
             </div>
         </div>
-        
-        </div>
+
+    </div>
     </div>
 </body>
 <script src="main.js"></script>
-<script type="module" src="project.js"></script>
+<script type="module">
+    import Project from './project_class.js';
 
+    var files;
+
+    await $.getJSON('./projects', data => {
+        files = data
+    });
+    console.log("Files: ", files);
+    let cardshtml = "";
+    for (let index = 0; index < files.length; index++) {
+        const element = new Project(files[index].slice(0, -3));
+        cardshtml += `
+    <div class="project-card" onclick="openProject('${element.meta.id}')">
+        <h3>${element.meta.title}</h3>
+        <p>
+            ${element.meta.description}
+        </p>
+        <img src="${element.meta.img}" alt="${element.meta.title}">
+    </div>
+    `;
+    }
+    console.log("Cards HTML: ", cardshtml);
+    var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
+    
+    function openProject(id) {
+        console.log("Opening project: ", id);
+        var params = new URLSearchParams();
+        params.append("project_id", id);
+        var url = "project_skeleton.html?" + params.toString();
+        var new_window = window.open(url, "_self");
+
+    }
+    window.openProject = openProject; // Expose the function to the global scope
+
+</script>
 </html>
 
 

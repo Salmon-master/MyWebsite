@@ -1,5 +1,7 @@
 ---
 title : Test Project
+description: a breif description
+id: testproj
 ...
 
 
