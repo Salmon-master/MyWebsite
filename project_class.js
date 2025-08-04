@@ -1,5 +1,6 @@
 import markdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/+esm'
 import metadata_block from 'https://cdn.jsdelivr.net/npm/markdown-it-metadata-block@1.0.6/+esm'
+import markdownItHighlightjs from 'https://cdn.jsdelivr.net/npm/markdown-it-highlightjs@4.2.0/+esm'
 import yaml from 'https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm'
 
 class Project {
@@ -18,6 +19,17 @@ class Project {
         const markdown = markdownIt().use(metadata_block, {
             parseMetadata: yaml.parse,
             meta
+        })
+        markdown.use(markdownItHighlightjs, {
+            highlight: function (str, lang) {
+                if (lang && hljs.getLanguage(lang)) {
+                    try {
+                        return hljs.highlight(str, { language: lang }).value;
+                    } catch (__) { }
+                }
+
+                return ''; // use external default escaping
+            }
         })
         this.page = markdown.render(result);
         this.meta = meta;

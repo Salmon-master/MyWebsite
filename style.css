@@ -376,4 +376,10 @@ img {
 }
 
 
-/* width */
+blockquote {
+    border-left: 7px solid var(--primary);
+    padding-left: 20px;
+    margin: 20px 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
