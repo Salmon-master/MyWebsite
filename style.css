@@ -70,6 +70,20 @@ h1 {
 
 }
 
+h2 {
+    font-size: 3rem;
+    color: var(--text);
+    font-weight: 500;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--text);
+    font-weight: 400;
+    margin: 0;
+}
+
 p a {
   position: relative;
   color: var(--link);
@@ -115,12 +129,7 @@ p a:hover::before {
 
 
 
-h2 {
-    font-size: 3rem;
-    color: var(--text);
-    font-weight: 500;
-    margin: 0;
-}
+
 
 p {
     font-size: 1.2rem;
@@ -390,4 +399,8 @@ ol {
     font-weight: 300;
     display: inline-block;
     line-height: 2.1rem;
+}
+strong {
+    color: var(--text);
+    font-weight: 600;
 }
