@@ -62,8 +62,9 @@ async function getLastPublicRepoCommitWithFormattedTime(username) {
     };
 }
 
+// `https://api.github.com/users/Salmon-master/events/public`
 // Example usage
-getLastPublicRepoCommitWithFormattedTime("jsteagle")
+getLastPublicRepoCommitWithFormattedTime("Salmon-master")
 .then(data => {
     console.log(`Last commit to ${data.repo}`);
     console.log(`Time: (${data.relativeTime})`);
