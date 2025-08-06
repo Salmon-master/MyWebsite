@@ -41,7 +41,7 @@
 .project-card{
     min-width: 16rem;
     background-color: var(--bg);
-    padding: 5px 20px;
+    padding: 20px;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
     display: flex;
@@ -52,7 +52,6 @@
     min-width: 16rem;
     background-color: var(--bg-light);
     scale: 1.03;
-    padding: 5px 20px;
     transition: all 0.3s ease-in-out;
 }
 .project-card img{
