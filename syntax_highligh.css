@@ -5,13 +5,14 @@ Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine
 .hljs {
     color: #000;
     background: #f8f8ff;
-    width: 100%;
-    display: block;
+    width: calc(100% - 40px);
+    display: inline-block;
     overflow-y: hidden;
     overflow-x: auto;
     padding: 20px;
     border-radius: 5px;
     font-size: 1rem;
+    margin: 0;
 }
 
 .hljs-comment,

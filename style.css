@@ -383,3 +383,11 @@ blockquote {
     color: var(--text-muted);
     font-style: italic;
 }
+
+ol {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    display: inline-block;
+    line-height: 2.1rem;
+}
