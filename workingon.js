@@ -68,7 +68,9 @@ getLastPublicRepoCommitWithFormattedTime("Salmon-master")
 .then(data => {
     console.log(`Last commit to ${data.repo}`);
     console.log(`Time: (${data.relativeTime})`);
-    document.getElementById("current-project").innerText = `${data.repo} (${data.relativeTime})`;
+    document.getElementById("project_link").href = `https://github.com/` + data.repo;
+    document.getElementById("project_link").innerText = ` ${data.repo}`;
+    document.getElementById("current-project").innerText = ` (${data.relativeTime})`;
   })
   .catch(err => console.error("Error:", err.message));
 
