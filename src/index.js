@@ -57,3 +57,4 @@ scroll_element.addEventListener('scroll', (event) => {
     document.getElementById("myBar").style.width = scrolled + "%";
 });
 
+document.onToggle = onToggle;
