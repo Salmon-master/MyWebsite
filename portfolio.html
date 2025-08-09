@@ -51,11 +51,11 @@
 </body>
 <script src="main.js"></script>
 <script type="module">
-    import Project from 'src/project_class.js';
+    import Project from '/src/project_class.js';
 
     var files;
 
-    await $.getJSON('src/projects', data => {
+    await $.getJSON('/src/projects', data => {
         files = data
     });
     console.log("Files: ", files);
