@@ -7,7 +7,7 @@ import katex from 'https://cdn.jsdelivr.net/npm/katex@0.16.22/+esm'
 
 class Project {
     constructor(string) {
-        var filePath = `../public/projects/${string}.md`
+        var filePath = `src/projects/${string}.md`
         var result = null;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", filePath, false);
