@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "markdown-it": "^14.1.0",
-    "markdown-it-meta": "^0.0.1",
-    "marked": "^16.1.1"
-  }
-}
