@@ -146,20 +146,25 @@ p {
     max-width: 70vw;
     margin: max(15vw, 50px);
     padding: 4vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    /* flex-direction: row;
+    justiiy-content: center;
+    align-items: center; */
     top: 300px;
 }
 
-@media (max-width: 1000px) {
-    .info_block {
-        flex-direction: column;
-        width: 60vw;
+@media (max-width: 1150px) {
+    .info_block{
+        grid-template-columns: 50% 50%;
+    }
+    
+}
+@media (max-width: 605px) {
+    .info_block{
+        grid-template-columns: 100%;
     }
 }
-
 
 
 
