@@ -4,4 +4,5 @@ description: My sumbission to the 2024 NCEA scolarship was to build a game cabin
 id: 2024CHSCAB
 img: src\cabinet.jpeg
 date: 2/12/2024
+tags: "C#, Hardware"
 ...

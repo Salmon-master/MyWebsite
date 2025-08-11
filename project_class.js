@@ -6,6 +6,7 @@ import yaml from 'https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm'
 import katex from 'https://cdn.jsdelivr.net/npm/katex@0.16.22/+esm'
 
 class Project {
+    static tags = []
     constructor(string) {
         var filePath = `src/projects/${string}.md`
         var result = null;
@@ -40,6 +41,12 @@ class Project {
         });
         this.page = markdown.render(result);
         this.meta = meta;
+        console.log(this.meta.tags ? this.meta.tags.split(',').map(tag => tag.trim()) : []);
+        for (let tag of (this.meta.tags ? this.meta.tags.split(',').map(tag => tag.trim()) : [])) {
+            if (!Project.tags.includes(tag)) {
+                Project.tags.push(tag);
+            }
+        }
     }
 }
 

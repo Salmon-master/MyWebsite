@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -34,12 +34,13 @@
             <a href="index.html" class="logo menu-item">Hugh Thompson</a>
             <a href="portfolio.html" class="menu-item">Portfolio</a>
             <a href="" class="menu-item">My Services</a>
-            <a href="" class="menu-item">Blog</a>
+            <a href="blog.html" class="menu-item">Blog</a>
             <a href="" class="menu-item">Contact</a>
         </div>
 
         <div class="main-body">
-            <h2>Portfolio</h2>
+            <h2>Blog</h2>
+            <p id="tags"></p>
             <div class="project-grid">
 
 
@@ -93,6 +94,8 @@
 
     }
     window.openProject = openProject; // Expose the function to the global scope
+    console.log(Project.tags)
+    document.getElementById("tags").innerText = "Tags: " + Project.tags.join(", ");
 
 </script>
 
