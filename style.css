@@ -145,24 +145,31 @@ p {
     border-radius: 10px;
     max-width: 70vw;
     margin: max(15vw, 50px);
-    padding: 4vh;
+    /* padding: 4vh; */
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
     /* flex-direction: row;
     justiiy-content: center;
     align-items: center; */
     top: 300px;
 }
+.span2 {
+    grid-column: span 2;
+}
 
 @media (max-width: 1150px) {
     .info_block{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
     }
     
 }
 @media (max-width: 605px) {
     .info_block{
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
+    }
+    .span2{
+        grid-column: span 1;
     }
 }
 
