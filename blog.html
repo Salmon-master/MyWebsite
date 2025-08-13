@@ -59,36 +59,48 @@
     await $.getJSON('/src/projects', data => {
         files = data
     });
-    console.log("Files: ", files);
-    let cardshtml = "";
+    function loadProjects(filter) {
+        console.log("Files: ", files);
+        let cardshtml = "";
 
-    let projects = files.map(file => {
-        return new Project(file.slice(0, -3));
-    });
-    console.log("Projects: ", projects);
-    console.log("test: ", projects[0].meta.date);
-    console.log("test2: ", Date.parse(projects[0].meta.date));
-    let sorted = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
-    for (const element of sorted) {
-        cardshtml += `
-        <div class="project-card" onclick="openProject('${element.meta.id}')">
-            <div>
-                <h3>${element.meta.title}</h3>`
-        if (element.meta.tags && element.meta.tags.length > 0) {
-            element.meta.tags.split(",").forEach(tag => {
-                cardshtml += `<span class="tag">${tag}</span>`;
-            });
-        }
-        cardshtml += `<h5>${element.meta.date}</h5>
-                <p>
-                    ${element.meta.description}
-                    </p>
+        let projects = files.map(file => {
+            return new Project(file.slice(0, -3));
+        });
+        console.log("Projects: ", projects);
+        console.log("test: ", projects[0].meta.date);
+        console.log("test2: ", Date.parse(projects[0].meta.date));
+        let sorted = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
+        for (const element of sorted) {
+            // console.log(element.meta.tags.split(",").includes(filter))
+            let tags = null;
+            if (element.meta.tags) {
+                tags = element.meta.tags ? element.meta.tags.split(", ") : [];
+                console.log("Tags: ", tags);
+            }
+            if (!filter || (tags && tags.includes(filter))) {
+                cardshtml += `
+            <div class="project-card" onclick="openProject('${element.meta.id}')">
+                <div>
+                    <h3>${element.meta.title}</h3>`
+                if (element.meta.tags && element.meta.tags.length > 0) {
+                    element.meta.tags.split(",").forEach(tag => {
+                        cardshtml += `<span class="tag">${tag}</span>`;
+                    });
+                }
+                cardshtml += `<h5>${element.meta.date}</h5>
+                    <p>
+                        ${element.meta.description}
+                        </p>
+                </div>
+                <img src="${element.meta.img}" alt="${element.meta.title}">
             </div>
-            <img src="${element.meta.img}" alt="${element.meta.title}">
-        </div>
-        `;
+            `;
+            }
+        
+        }
+        var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
     }
-    var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
+    loadProjects(null); // Load all projects initially
 
     function openProject(id) {
         console.log("Opening project: ", id);
@@ -100,14 +112,21 @@
     }
 
     function order(tag) {
-        
+        if (document.getElementById(tag).classList.contains("active_tag")) {
+            console.log("Already ordered by tag: ", tag);
+            document.getElementById(tag).classList.remove("active_tag")
+        } else {
+            console.log("Ordering by tag: ", tag);
+            loadProjects(tag); // Load projects filtered by the selected tag
+            document.getElementById(tag).classList.add("active_tag");
+        }
     }
-
+    document.order = order; // Expose the function to the global scope
     window.openProject = openProject; // Expose the function to the global scope
     console.log(Project.tags)
     let tag_html = "";
     Project.tags.forEach(tag => {
-        tag_html += `<span class="tag" onclick="order(${tag})">${tag}</span>`;
+        tag_html += `<span class="tag" onclick="order('${tag}')" id="${tag}">${tag}</span>`;
     });
     document.getElementById("tags").innerHTML = tag_html;
 
@@ -116,4 +135,3 @@
 </script>
 
 </html>
-
