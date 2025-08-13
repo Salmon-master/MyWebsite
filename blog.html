@@ -106,7 +106,9 @@
             }
         
         }
-        if(cardshtml){}
+        if(cardshtml == ""){
+            cardshtml = "<h2>Sorry, Nothing Matches!</h2>"
+        }
         var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
     }
     loadProjects(); // Load all projects initially
@@ -127,11 +129,14 @@
             let index = filter_list.indexOf(tag)
             filter_list.splice(index, 1)
             loadProjects()
+            let str = document.getElementById(tag).innerHTML
+            document.getElementById(tag).innerHTML = str.substring(0, str.length - 3)
         } else {
             console.log("Ordering by tag: ", tag);
             filter_list.push(tag)
             loadProjects(); // Load projects filtered by the selected tag
             document.getElementById(tag).classList.add("active_tag");
+            document.getElementById(tag).innerText += "  ✖"
         }
     }
     document.order = order; // Expose the function to the global scope

@@ -98,9 +98,11 @@
 .active_tag{
     background-color: var(--primary);
     scale: 1.03;
+    text-decoration: none;
 
 }
 .active_tag:hover{
     background-color: var(--danger);
     scale: 1;
+    text-decoration: line-through;
 }
