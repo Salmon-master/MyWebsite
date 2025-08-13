@@ -73,8 +73,13 @@
         cardshtml += `
         <div class="project-card" onclick="openProject('${element.meta.id}')">
             <div>
-                <h3>${element.meta.title}</h3>
-                <h5>${element.meta.date}</h5>
+                <h3>${element.meta.title}</h3>`
+        if (element.meta.tags && element.meta.tags.length > 0) {
+            element.meta.tags.split(",").forEach(tag => {
+                cardshtml += `<span class="tag">${tag}</span>`;
+            });
+        }
+        cardshtml += `<h5>${element.meta.date}</h5>
                 <p>
                     ${element.meta.description}
                     </p>
@@ -93,19 +98,22 @@
         var new_window = window.open(url, "_self", `width=${window.innerWidth},height=${window.innerHeight}`);
 
     }
+
+    function order(tag) {
+        
+    }
+
     window.openProject = openProject; // Expose the function to the global scope
     console.log(Project.tags)
-    document.getElementById("tags").innerText = "Tags: " + Project.tags.join(", ");
+    let tag_html = "";
+    Project.tags.forEach(tag => {
+        tag_html += `<span class="tag" onclick="order(${tag})">${tag}</span>`;
+    });
+    document.getElementById("tags").innerHTML = tag_html;
+
+
 
 </script>
 
 </html>
 
-
-
-<!-- <div class="project-card">
-                    <h3>A Project</h3>
-                    <p>
-                        A breif description of the project goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div> -->

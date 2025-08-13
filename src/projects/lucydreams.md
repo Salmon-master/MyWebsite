@@ -4,6 +4,7 @@ description: This was a part of 72 hour Mini Jam 105 2022. It was made using C++
 date: 2/5/2022
 id: lucydreams
 img: https://img.itch.zone/aW1hZ2UvMTUxMDM0OS84ODA0MzkyLnBuZw==/original/mWe0Qs.png
+tags: "GameDev, C++, OpenGl"
 ...
 
 
