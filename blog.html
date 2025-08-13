@@ -59,7 +59,10 @@
     await $.getJSON('/src/projects', data => {
         files = data
     });
-    function loadProjects(filter) {
+
+    let filter_list= [];
+
+    function loadProjects() {
         console.log("Files: ", files);
         let cardshtml = "";
 
@@ -70,14 +73,19 @@
         console.log("test: ", projects[0].meta.date);
         console.log("test2: ", Date.parse(projects[0].meta.date));
         let sorted = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
+
         for (const element of sorted) {
             // console.log(element.meta.tags.split(",").includes(filter))
             let tags = null;
+            let show = false
             if (element.meta.tags) {
                 tags = element.meta.tags ? element.meta.tags.split(", ") : [];
                 console.log("Tags: ", tags);
             }
-            if (!filter || (tags && tags.includes(filter))) {
+            if(tags){
+                show = filter_list.every(val => tags.includes(val))
+            }
+            if (filter_list.length == 0 || show == true) {
                 cardshtml += `
             <div class="project-card" onclick="openProject('${element.meta.id}')">
                 <div>
@@ -98,9 +106,10 @@
             }
         
         }
+        if(cardshtml){}
         var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
     }
-    loadProjects(null); // Load all projects initially
+    loadProjects(); // Load all projects initially
 
     function openProject(id) {
         console.log("Opening project: ", id);
@@ -115,9 +124,13 @@
         if (document.getElementById(tag).classList.contains("active_tag")) {
             console.log("Already ordered by tag: ", tag);
             document.getElementById(tag).classList.remove("active_tag")
+            let index = filter_list.indexOf(tag)
+            filter_list.splice(index, 1)
+            loadProjects()
         } else {
             console.log("Ordering by tag: ", tag);
-            loadProjects(tag); // Load projects filtered by the selected tag
+            filter_list.push(tag)
+            loadProjects(); // Load projects filtered by the selected tag
             document.getElementById(tag).classList.add("active_tag");
         }
     }
@@ -126,7 +139,7 @@
     console.log(Project.tags)
     let tag_html = "";
     Project.tags.forEach(tag => {
-        tag_html += `<span class="tag" onclick="order('${tag}')" id="${tag}">${tag}</span>`;
+        tag_html += `<span class="tag a" onclick="order('${tag}')" id="${tag}">${tag}</span>`;
     });
     document.getElementById("tags").innerHTML = tag_html;
 

@@ -71,6 +71,9 @@
     color: var(--text-muted);
     
 }
+.project-card:hover .tag{
+    background-color: var(--primary);
+}
 
 .katex-html {
     display: none;
@@ -91,4 +94,13 @@
     background-color: var(--primary);
     cursor: pointer;
     scale: 1.03;
+}
+.active_tag{
+    background-color: var(--primary);
+    scale: 1.03;
+
+}
+.active_tag:hover{
+    background-color: var(--danger);
+    scale: 1;
 }
