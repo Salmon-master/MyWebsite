@@ -106,3 +106,13 @@
     scale: 1;
     text-decoration: line-through;
 }
+
+#search {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    display: block;
+}

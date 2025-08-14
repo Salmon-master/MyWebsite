@@ -40,6 +40,9 @@
 
         <div class="main-body">
             <h2>Blog</h2>
+
+            <input type="text" id="search" placeholder="Search..." >
+
             <p id="tags"></p>
             <div class="project-grid">
 
@@ -61,31 +64,38 @@
     });
 
     let filter_list= [];
+    let projects = files.map(file => {
+        return new Project(file.slice(0, -3));
+    });
+    console.log("Projects: ", projects);
+    console.log("test: ", projects[0].meta.date);
+    console.log("test2: ", Date.parse(projects[0].meta.date));
+    let sorted = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
 
     function loadProjects() {
-        console.log("Files: ", files);
+
+        let search_term = document.getElementById("search").value.toLowerCase();
+        console.log("Search term: ", search_term);
         let cardshtml = "";
 
-        let projects = files.map(file => {
-            return new Project(file.slice(0, -3));
-        });
-        console.log("Projects: ", projects);
-        console.log("test: ", projects[0].meta.date);
-        console.log("test2: ", Date.parse(projects[0].meta.date));
-        let sorted = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
-
         for (const element of sorted) {
-            // console.log(element.meta.tags.split(",").includes(filter))
             let tags = null;
             let show = false
+            // Get tags from element metadata
             if (element.meta.tags) {
                 tags = element.meta.tags ? element.meta.tags.split(", ") : [];
-                console.log("Tags: ", tags);
             }
+            // Check if the project should be shown based on the tags
             if(tags){
                 show = filter_list.every(val => tags.includes(val))
             }
-            if (filter_list.length == 0 || show == true) {
+
+            if (search_term) {
+                let term_found = element.meta.title.toLowerCase().includes(search_term) || element.meta.description.toLowerCase().includes(search_term);
+                show = show && term_found;
+            }
+
+            if (show == true) {
                 cardshtml += `
             <div class="project-card" onclick="openProject('${element.meta.id}')">
                 <div>
@@ -109,9 +119,14 @@
         if(cardshtml == ""){
             cardshtml = "<h2>Sorry, Nothing Matches!</h2>"
         }
-        var grids = document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
+        document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
     }
+
     loadProjects(); // Load all projects initially
+
+    document.getElementById('search').addEventListener('keyup', (event) => {
+        loadProjects();
+    });
 
     function openProject(id) {
         console.log("Opening project: ", id);
@@ -139,8 +154,11 @@
             document.getElementById(tag).innerText += "  ✖"
         }
     }
+    // document.getElementById('search').addEventListener('input', loadProjects);
+
     document.order = order; // Expose the function to the global scope
     window.openProject = openProject; // Expose the function to the global scope
+    window.loadProjects = loadProjects; // Expose the function to the global scope
     console.log(Project.tags)
     let tag_html = "";
     Project.tags.forEach(tag => {
