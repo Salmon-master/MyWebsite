@@ -41,7 +41,7 @@
         <div class="main-body">
             <h2>Blog</h2>
 
-            <input type="text" id="search" placeholder="Search..." >
+            <input type="text" id="search" placeholder="Search...">
 
             <p id="tags"></p>
             <div class="project-grid">
@@ -59,11 +59,20 @@
 
     var files;
 
-    await $.getJSON('/src/projects/', data => {
-        files = data
-    });
+    try {
+        const response = await fetch('/api/projects');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        files = await response.json();
+        console.log('Loaded files:', files);
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        // Fallback: use an empty array or hardcoded list
+        files = [];
+    }
 
-    let filter_list= [];
+    let filter_list = [];
     let projects = files.map(file => {
         return new Project(file.slice(0, -3));
     });
@@ -86,7 +95,7 @@
                 tags = element.meta.tags ? element.meta.tags.split(", ") : [];
             }
             // Check if the project should be shown based on the tags
-            if(tags){
+            if (tags) {
                 show = filter_list.every(val => tags.includes(val))
             }
 
@@ -114,9 +123,9 @@
             </div>
             `;
             }
-        
+
         }
-        if(cardshtml == ""){
+        if (cardshtml == "") {
             cardshtml = "<h2>Sorry, Nothing Matches!</h2>"
         }
         document.getElementsByClassName('project-grid')[0].innerHTML = cardshtml;
