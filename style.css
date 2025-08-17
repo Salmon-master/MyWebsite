@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 1000px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.2;
     }
 }
