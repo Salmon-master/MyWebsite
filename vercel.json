@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/projects.js": {
+      "runtime": "@vercel/node"
+    }
+  }
+}
