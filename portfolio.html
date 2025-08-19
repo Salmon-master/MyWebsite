@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -39,37 +39,11 @@
             <a href="" class="menu-item">Contact</a>
         </div>
 
-        <div class="main-body">
-            <a href="blog.html" class="button">Back</a>
-            <hr>
-            <div id="content" style="padding: 20px;">
-
-            </div>
-
-        </div>
+        
 
     </div>
     </div>
 </body>
 <script src="main.js"></script>
-
-<script type="module">
-    import Project from '/project_class.js';
-
-    window.onload = function () {
-        // This will be called when the window is fully loaded
-
-        console.log("Window loaded");
-        var params = new URLSearchParams(window.location.search);
-        var project_id = params.get('project_id') || 'No message provided';
-        
-        let proj = new Project(project_id);
-
-        document.getElementById("content").innerHTML = `${proj.page}`;
-
-
-    };
-
-</script>
 
 </html>
