@@ -1,6 +1,6 @@
 @import url("style.css");
 
-:root{
+:root {
     --main-time: 1s;
 }
 
@@ -12,15 +12,17 @@
     display: inline-block;
     position: fixed;
     top: 0;
-    z-index: 1000; /* Lower than header */
+    z-index: 1000;
+    /* Lower than header */
     height: 100vh;
 }
-.navbar.open{
+
+.navbar.open {
     width: 25rem;
     transition: width var(--main-time) ease-in-out;
 }
 
-.navbar a{
+.navbar a {
     display: block;
     padding: 20px;
     text-decoration: none;
@@ -30,13 +32,15 @@
     width: 22.3rem;
     color: var(--text);
 }
-.navbar a.open:not(.logo):hover{
+
+.navbar a.open:not(.logo):hover {
     background-color: var(--bg-light);
     transition: background-color 0.3s ease-in-out;
     transition: scale 0.4s ease-in-out;
     scale: 1.03;
 }
-.navbar a.open{
+
+.navbar a.open {
     transform: translateX(0px);
     transition: transform var(--main-time) ease-in-out;
 }
@@ -86,27 +90,41 @@
     width: 18rem;
 }
 
+/* @media (max-width: 700px) {
+    .navbar.open {
+        width: 20rem;
+    }
+
+    .menu-btn.close {
+        transform: translateX(15.5rem);
+    }
+
+    .navbar a {
+        width: 17.5rem;
+        transform: translateX(-20rem);
+    }
+} */
 
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000; 
-  background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: red;
 }
 
 
 .progress-container {
-  width: 100%;
-  height: 2px;
-  background: var(--bg-dark);
+    width: 100%;
+    height: 2px;
+    background: var(--bg-dark);
 }
 
 
 .progress-bar {
-  height: 2px;
-  background: var(--text-muted);
-  width: 0px;
+    height: 2px;
+    background: var(--text-muted);
+    width: 0px;
 }
