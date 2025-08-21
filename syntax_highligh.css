@@ -1,10 +1,11 @@
 /*
 Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine (@thingsinjars)
 */
+@import url("style.css");
 
 .hljs {
     color: #000;
-    background: #f8f8ff;
+    background: var(--bg);
     width: calc(100% - 40px);
     display: inline-block;
     overflow-y: hidden;
