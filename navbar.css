@@ -28,23 +28,24 @@
     text-decoration: none;
     font-size: 2rem;
     transform: translateX(-25rem);
-    transition: all var(--main-time) ease-in-out;
-    width: 22.3rem;
+    /* transition: all var(--main-time) ease-in-out; */
+    width: calc(25rem - 40px);
     color: var(--text);
 }
 
-.navbar a.open:not(.logo):hover {
-    background-color: var(--bg-light);
-    transition: background-color 0.3s ease-in-out;
-    transition: scale 0.4s ease-in-out;
-    scale: 1.03;
-}
 
 .navbar a.open {
     transform: translateX(0px);
     transition: transform var(--main-time) ease-in-out;
 }
 
+.navbar a.open:not(.logo):hover {
+    background-color: var(--bg-light);
+    transition: background-color 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.03);
+    width: calc((1/1.03) * (25rem - 40px));
+}
 
 
 .menu-btn {
