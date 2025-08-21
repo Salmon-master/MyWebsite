@@ -4,26 +4,26 @@
     display: grid;
     padding: 20px;
     gap: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    height: 70vh;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: var(--bg--dark);
+    /* border: 5px solid var(--border-muted);*/
+    border-radius: 10px; 
 }
 .project-grid::-webkit-scrollbar {
     width: 10px;
-    background-color: var(--bg);
-}
-/* Track */
- 
-/* Handle */
-.project-grid::-webkit-scrollbar-thumb {
-  background: var(--bg-light); 
+    background-color: var(--bg-light);
 }
 
-/* Handle on hover */
+.project-grid::-webkit-scrollbar-thumb {
+  background: var(--border-muted); 
+}
+
 .project-grid::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: var(--border); 
 }
 
 
