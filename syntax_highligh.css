@@ -4,8 +4,8 @@ Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine
 @import url("style.css");
 
 .hljs {
-    color: #000;
-    background: var(--bg);
+    color: var(--text);
+    background: var(--bg-light);
     width: calc(100% - 40px);
     display: inline-block;
     overflow-y: hidden;
