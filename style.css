@@ -130,11 +130,16 @@ p a:hover::before,
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     margin: auto;
+
     width: min-content;
     top: calc(50vh - 10rem);
     position: relative;
 }
-
+@media screen and (max-width: 1000px) {
+    .statement {
+        font-size: 4rem;
+    }
+}
 
 
 
