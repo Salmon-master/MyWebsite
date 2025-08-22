@@ -3,7 +3,7 @@
 .project-grid{
     display: grid;
     padding: 20px;
-    gap: 10px;
+    gap: 15px;
     margin: 20px 0;
     grid-template-columns: 33.3% 33.3% 33.3%;
     height: 100vh;

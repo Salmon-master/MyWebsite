@@ -152,8 +152,8 @@ p {
     background-color: var(--bg-dark);
     /* border: 1px, solid var(--border); */
     border-radius: 10px;
-    max-width: 70vw;
-    margin: max(15vw, 50px);
+    width: 100vw;
+    /* margin: max(15vw, 50px); */
     /* padding: 4vh; */
     grid-column-gap: 1rem;
     /* flex-direction: row;
@@ -171,7 +171,7 @@ p {
 }
 
 .block {
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
     /* border: 2px solid var(--border); */
     border-radius: 10px;
     padding: 20px;
