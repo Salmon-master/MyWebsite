@@ -57,7 +57,6 @@
         padding: 40px;
         height: 80vh;
         width: 500px;
-        margin: 20px;
     }
 
     .cards {
@@ -162,7 +161,8 @@
 <script src="main.js"></script>
 <script>
     const smoothing = 100000;
-    document.getElementById("cards").addEventListener("scroll", function() {
+
+    function doScale() {
         // Get the scroll position
         cards = document.getElementById("cards");
         var scrollTop = cards.scrollTop;
@@ -177,14 +177,13 @@
             
             // Check if the card is in the viewport
             card.style.opacity = Math.exp(-(cardTop - scrollTop) * (cardTop - scrollTop) / (smoothing));
-            card.style.scale = Math.exp(-(cardTop - scrollTop) * (cardTop - scrollTop) / (2 * smoothing));
+            card.style.scale = Math.exp(-(cardTop - scrollTop) * (cardTop - scrollTop) / (2 * smoothing)) ;
         });
+    };
 
+    document.getElementById("cards").addEventListener("scroll", doScale);
+    doScale();
 
-        // Check if the user has scrolled to the bottom
-    });
-
-    
 </script>
 
 </html>
