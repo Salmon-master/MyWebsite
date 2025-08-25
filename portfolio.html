@@ -55,6 +55,7 @@
     .card {
         background-color: var(--bg);
         padding: 40px;
+        height: 80vh;
         width: 500px;
         margin: 20px;
     }
@@ -73,6 +74,7 @@
         display: inline;
         transition: all 0.3s ease;
         margin: 0 10px;
+        border-radius: 0px;
     }
     .link-img:hover{
         transform: scale(1.1);
@@ -114,7 +116,7 @@
             <a href="blog.html" class="menu-item">Blog</a>
             <a href="" class="menu-item">Contact</a>
         </div>
-        <div class="cards">
+        <div class="cards" id="cards">
             <div class="card">
                 <h2>Test Project</h2>
                 <div class="links">
@@ -132,6 +134,7 @@
                     <a href="https://salmon-master.github.io" target="_blank" class="iframe-overlay"></a>
                 </div>
             </div>
+
             <div class="card">
                 <h2>Lucy Dreams</h2>
                 <div class="links">
@@ -157,5 +160,31 @@
     </div>
 </body>
 <script src="main.js"></script>
+<script>
+    const smoothing = 100000;
+    document.getElementById("cards").addEventListener("scroll", function() {
+        // Get the scroll position
+        cards = document.getElementById("cards");
+        var scrollTop = cards.scrollTop;
+        var scrollHeight = cards.scrollHeight;
+        var clientHeight = cards.clientHeight;
+
+        cards = document.getElementsByClassName("card");
+        Array.from(cards).forEach(card => {
+            var cardTop = card.offsetTop - 20;
+            var cardHeight = card.offsetHeight;
+            console.log(cardTop, scrollTop);
+            
+            // Check if the card is in the viewport
+            card.style.opacity = Math.exp(-(cardTop - scrollTop) * (cardTop - scrollTop) / (smoothing));
+            card.style.scale = Math.exp(-(cardTop - scrollTop) * (cardTop - scrollTop) / (2 * smoothing));
+        });
+
+
+        // Check if the user has scrolled to the bottom
+    });
+
+    
+</script>
 
 </html>
