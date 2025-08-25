@@ -68,6 +68,17 @@
         margin: auto;
         padding-top: calc(50vh - 250px);
     }
+    .link-img{
+        width: 40px;
+        display: block;
+        transition: all 0.3s ease;
+        margin: 0 10px;
+    }
+    .link-img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        
+    }
 </style>
 
 <body>
@@ -93,8 +104,10 @@
         <div class="cards">
             <div class="card">
                 <h2>Test Project</h2>
+                <a href="https://github.com/Salmon-master/Salmon-master.github.io">
+                    <img src="src/github-mark-white.png" alt="github logo" class="link-img" target="_blank">
+                </a>
                 <p>A very breif description. Read more...</p>
-                <a href=""></a>
                 <div class="iframe-container">
                     <iframe src="https://salmon-master.github.io" scrolling="no"></iframe>
                     <a href="https://salmon-master.github.io" target="_blank" class="iframe-overlay"></a>
