@@ -64,20 +64,33 @@
         position: static;
         overflow-y: scroll;
         height: 100vh;
-        width: 600px;
+        width: 700px;
         margin: auto;
-        padding-top: calc(50vh - 250px);
+        /* padding-top: calc(50vh - 250px); */
     }
     .link-img{
-        width: 40px;
-        display: block;
+        width: 35px;
+        display: inline;
         transition: all 0.3s ease;
         margin: 0 10px;
     }
     .link-img:hover{
         transform: scale(1.1);
         cursor: pointer;
+        filter: brightness(0.7);
         
+    }
+    .links{
+        margin-bottom: 20px;
+        display: block;
+    }
+    .cover-img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin: 0;
     }
 </style>
 
@@ -104,9 +117,15 @@
         <div class="cards">
             <div class="card">
                 <h2>Test Project</h2>
-                <a href="https://github.com/Salmon-master/Salmon-master.github.io">
-                    <img src="src/github-mark-white.png" alt="github logo" class="link-img" target="_blank">
-                </a>
+                <div class="links">
+                    <a href="https://github.com/Salmon-master/Salmon-master.github.io">
+                        <img src="src/github-mark-white.png" alt="github logo" class="link-img" target="_blank">
+                    </a>
+                    <a href="https://salmon-master.github.io">
+                        <img src="src/webicon.svg" alt="web icon" class="link-img" target="_blank">
+                    </a>
+                </div>
+
                 <p>A very breif description. Read more...</p>
                 <div class="iframe-container">
                     <iframe src="https://salmon-master.github.io" scrolling="no"></iframe>
@@ -114,9 +133,21 @@
                 </div>
             </div>
             <div class="card">
-                <h2>Test Project</h2>
-                <iframe src="https://salmon-master.github.io" scrolling="no"
-                    onclick="window.open('https://salmon-master.github.io', '_blank')"></iframe>
+                <h2>Lucy Dreams</h2>
+                <div class="links">
+                    <a href="https://github.com/CodingPluto/LucyDreams">
+                        <img src="src/github-mark-white.png" alt="github logo" class="link-img" target="_blank">
+                    </a>
+                    <a href="https://cerberus001.itch.io/lucy-dreams">
+                        <img src="src/itchio-logo.svg" alt="itchio-logo" class="link-img" target="_blank">
+                    </a>
+                    <a href="src/Lucy Dreams - Windows.zip">
+                        <img src="src/icons8-windows-10.svg" alt="Windows logo" class="link-img" target="_blank">
+                    </a>
+                </div>
+                <p>A submission to the dreamy game jam 2023</p>
+                <img src="https://img.itch.zone/aW1hZ2UvMTUxMDM0OS84ODA0MzkyLnBuZw==/original/mWe0Qs.png" alt="Lucy Dreams Screenshot" class="cover-img">
+
             </div>
 
         </div>
