@@ -33,8 +33,9 @@
 
     .iframe-container {
         position: relative;
-        width: 500px;
-        height: 500px;
+        width: calc(100%- 80px);
+        /* height: 100%; */
+        /* height: 500px; */
     }
 
 
@@ -44,8 +45,8 @@
 
     /* Keep pointer-events: none on iframe */
     iframe {
-        height: 500px;
-        width: 500px;
+        height: 100%;
+        width: 100%;
         border: 3px solid var(--border);
         overflow: hidden;
         /* pointer-events: none; */
@@ -56,7 +57,7 @@
         background-color: var(--bg);
         padding: 40px;
         height: 80vh;
-        width: 500px;
+        width: 50vw;
     }
 
     .cards {
@@ -64,8 +65,9 @@
         position: static;
         overflow-y: scroll;
         height: 100vh;
-        width: 700px;
-        margin: auto;
+        margin: 0;
+        margin-left: 40vw;
+        width: fit-content;
         /* padding-top: calc(50vh - 250px); */
     }
     .link-img{
@@ -86,12 +88,13 @@
         display: block;
     }
     .cover-img {
-        width: 100%;
-        height: auto;
-        object-fit: fill;
+        /* width: 100%; */
+        height: fit-content;
+        object-fit: contain;
         border-radius: 8px;
         margin-top: 10px;
         margin: 0;
+        display: block;
     }
 </style>
 
@@ -132,6 +135,24 @@
                     <iframe src="https://salmon-master.github.io" scrolling="no"></iframe>
                     <a href="https://salmon-master.github.io" target="_blank" class="iframe-overlay"></a>
                 </div>
+            </div>
+
+            <div class="card">
+                <h2>Lucy Dreams</h2>
+                <div class="links">
+                    <a href="https://github.com/CodingPluto/LucyDreams">
+                        <img src="src/github-mark-white.png" alt="github logo" class="link-img" target="_blank">
+                    </a>
+                    <a href="https://cerberus001.itch.io/lucy-dreams">
+                        <img src="src/itchio-logo.svg" alt="itchio-logo" class="link-img" target="_blank">
+                    </a>
+                    <a href="src/Lucy Dreams - Windows.zip">
+                        <img src="src/icons8-windows-10.svg" alt="Windows logo" class="link-img" target="_blank">
+                    </a>
+                </div>
+                <p>A submission to the dreamy game jam 2023</p>
+                <img src="https://img.itch.zone/aW1hZ2UvMTUxMDM0OS84ODA0MzkyLnBuZw==/original/mWe0Qs.png" alt="Lucy Dreams Screenshot" class="cover-img">
+
             </div>
 
             <div class="card">
