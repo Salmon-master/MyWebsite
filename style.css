@@ -88,19 +88,23 @@ h3 {
 
 }
 
-p a,
+li {
+    margin: 0.7rem 0;
+}
+
+p a, li a,
 .workingon li a {
     position: relative;
     color: var(--link);
     text-decoration: none;
 }
 
-p a:hover,
+p a:hover, li a:hover,
 .workingon li a:hover {
     color: color-mix(in srgb, var(--link), black 10%);
 }
 
-p a::before,
+p a::before, li a::before,
 .workingon li a::before {
     content: "";
     position: absolute;
@@ -115,7 +119,7 @@ p a::before,
     transform-origin: left;
 }
 
-p a:hover::before,
+p a:hover::before, li a:hover::before,
 .workingon li a:hover::before {
     transform: scaleX(1);
     transition: all 0.3s ease;
@@ -476,3 +480,4 @@ strong {
     transition: all 0.3s ease;
     background-color: color-mix(in srgb, var(--link), black 10%);
 } */
+

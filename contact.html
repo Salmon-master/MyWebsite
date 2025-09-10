@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -15,7 +15,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
     <link rel="stylesheet" href="project-grid.css">
-    <link rel="stylesheet" href="syntax_highligh.css">
 </head>
 
 <body>
@@ -38,12 +37,23 @@
         </div>
 
         <div class="main-body">
-            <a href="blog.html" class="button">Back</a>
-            <hr>
-            <div id="content" style="padding: 20px;">
+            <h2>Contact</h2>
+            <p>If you would like to get in touch, please feel free to reach out at any of the below methods, email would be preferred.
+                <ul>
+                    <li>Email: <a href="mailto:hugh.bill@icloud.com">hugh.bill@icloud.com</a></li>
+                    <li>Phone: <a href="tel:+64 27 213 9255">+64 27 213 9255</a></li>
+                </ul> </p>
+                <p>Alternatively, you can also find me on various other platforms at the below links:</p>
+                <ul>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/hugh-bill">https://www.linkedin.com/in/hugh-bill</a></li>
+                    <li>GitHub: <a href="https://github.com/Salmon-master">https://github.com/Salmon-master</a></li>
+                    <li>Itch.io: <a href="https://cerberus001.itch.io">https://cerberus001.itch.io</a></li>
+                </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185187.0379022134!2d172.43419728384995!3d-43.511775097215484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d322f4863c5ed01%3A0x500ef8684799945!2sChristchurch!5e0!3m2!1sen!2snz!4v1757501979088!5m2!1sen!2snz"  height="450" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+
 
             </div>
-
         </div>
         <div class="footer">
                     <div class="footer-icons">
@@ -58,24 +68,5 @@
     </div>
 </body>
 <script src="main.js"></script>
-
-<script type="module">
-    import Project from '/project_class.js';
-
-    window.onload = function () {
-        // This will be called when the window is fully loaded
-
-        console.log("Window loaded");
-        var params = new URLSearchParams(window.location.search);
-        var project_id = params.get('project_id') || 'No message provided';
-        
-        let proj = new Project(project_id);
-
-        document.getElementById("content").innerHTML = `${proj.page}`;
-
-
-    };
-
-</script>
 
 </html>
