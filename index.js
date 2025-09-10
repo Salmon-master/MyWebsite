@@ -49,7 +49,6 @@ arrow.addEventListener("animationiteration", myFunction);
 // When the user scrolls the page, execute myFunction
 
 scroll_element.addEventListener('scroll', (event) => {
-    console.log("scrolling", scroll_element.scrollTop);
     var winScroll = scroll_element.scrollTop;
     var height = scroll_element.scrollHeight - scroll_element.clientHeight;
     var scrolled = (winScroll / height) * 100;
