@@ -4,6 +4,7 @@ import markdownItHighlightjs from 'https://cdn.jsdelivr.net/npm/markdown-it-high
 import markdownItTexmath from 'https://cdn.jsdelivr.net/npm/markdown-it-texmath@1.0.0/+esm'
 import yaml from 'https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm'
 import katex from 'https://cdn.jsdelivr.net/npm/katex@0.16.22/+esm'
+import markdownItEmbed from 'https://cdn.jsdelivr.net/npm/@dwk/markdown-it-embed@0.0.5/+esm'
 
 class Project {
     static tags = []
@@ -38,6 +39,9 @@ class Project {
             engine: katex,
             delimiters: 'dollars',
             katexOptions: { macros: { "\\RR": "\\mathbb{R}" } }
+        });
+        markdown.use(markdownItEmbed, {
+            containerClassName: "video-embed"
         });
         this.page = markdown.render(result);
         this.meta = meta;
