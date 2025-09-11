@@ -12,4 +12,5 @@ My friend Chris approached me one day and asked if I wanted to join him on some 
 The Te Araroa (TA) Trail is a walking trail that stretches 3,000km from cape Rerenga to bluff across the length of New Zealand.  The Māori name translates to "The Long Pathway". We did not have a large amount of time between our last exam and our first day of university, and we didn't plan on running the track, we decided to walk on the south island section of the track as it is a bit more interesting than the north.
 
 ## Planning Stage
+As you can image, walking for 
 @[Google Sheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vR2vwgi-gIrJY-2GS-i790lQs-wyVxnEZa4xuSWRp_vpgoH6H2LFAPi8-_ZgMljnggWYyKKNRn8bCZw/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false "The master sheet")

@@ -73,7 +73,7 @@ h1 {
 h2 {
     font-size: 3rem;
     color: var(--text);
-    font-weight: 500;
+    font-weight: 700;
     margin: 1.5rem;
     margin-left: 0;
 
@@ -82,7 +82,7 @@ h2 {
 h3 {
     font-size: 2rem;
     color: var(--text);
-    font-weight: 400;
+    font-weight: 600;
     margin: 0;
     margin-bottom: 0.5rem;
 
@@ -437,6 +437,12 @@ strong {
     }
 }
 
+/* .workingon {
+
+    width: fit-content;
+    margin: 1vh auto;
+} */
+
 .workingon li::marker {
     color: var(--primary);
     animation: GFG 2s infinite ease-in-out;
@@ -455,6 +461,10 @@ strong {
     position: relative;
     color: var(--link);
     text-decoration: none;
+}
+
+blockquote{
+    margin: 5px 0 ;
 }
 
 /* .workingon li a:hover {

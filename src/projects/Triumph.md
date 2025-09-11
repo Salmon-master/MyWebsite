@@ -3,7 +3,7 @@ title : The Saga of my Green Machine
 description: In 2022, at the age of 16, I bought myself a 1969 Triumph Herald. This is the story of my journey with this car.
 id: Triumph
 img: src\car.jpg
-date: 9/10/2025
+date: 23/02/2023
 tags: "Mechanical, Car, Engine"
 ...
 # Introduction
