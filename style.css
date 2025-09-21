@@ -491,3 +491,16 @@ blockquote{
     background-color: color-mix(in srgb, var(--link), black 10%);
 } */
 
+/* Employment History Section Styles */
+
+.employment-list {
+    margin: auto;
+    width: 100%;
+    list-style-type:circle;
+}
+.employment-list li {
+    margin: 0.7rem 0;
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+}
