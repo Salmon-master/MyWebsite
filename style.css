@@ -157,6 +157,17 @@ p {
     margin: 0.5rem 0;
 }
 
+ul {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    
+}
+ul li {
+    margin: 20px;
+    list-style: circle;
+}
+
 .info_block {
     background-color: var(--bg-dark);
     /* border: 1px, solid var(--border); */

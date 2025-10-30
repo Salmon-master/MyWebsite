@@ -24,3 +24,19 @@ The first step was to mask off the area to protect the paint, and then clean up 
 
 !["Images of the Rust after cleaning up"](src/projects/WinRepImg/cleaned.png)
 
+A patch panel was then formed out of some 1 mm sheet metal using the shrinker stretcher, and the panel was then formed to the exact shape needed using a hammer and body spoon using the existing panel as a template. The rust holes were then cut out of the car, and there areas behind inspected and cleaned, and the sprayed with some black zinc to help prevent future rust.
+
+!["Images of the Patch panel being formed"](src/projects/WinRepImg/IMG_1738.jpg)
+
+The patch was then fitted into the hole, and given some final forming alterations using the hammer. It was then welded in place using a TIG (Tungsten Inert Gas) welder. A TIG was used due to the a couple main reasons:
+* A TIG has a relatively small amount of heat input compared to something like a gas welding plant, which minimises warping of the surrounding metal.
+* A MIG welder results in a weld that is harder to reshape with a hammer and dolly after welding.
+* A TIG welder allows for more precise control over the weld pool, making it easier to create clean, strong welds.
+
+Tack welds were then used to hold the panel in place, and the panel was then full welded into place. Along the back of the panel, where it was attached to the existing bulkhead skin, holes were punched into the panel and then the panel was plug welded to the existing skin to ensure a strong bond. The rest of the welds were butt welds, but with much more filler rod then normal so that the weld could be ground back to the original contour of the panel.
+
+!["Images of the Patch panel being welded in place"](src/projects/WinRepImg/IMG_1741.jpg)
+
+I began to grind off the weld using a belt sander, but I accidentally ground too much off in one spot and went through the panel. 5 hours of work was thrown down the gurgler in 30 seconds of overzealous grinding. To fix it would be a complete redo of the patch. I wanted to cry. However this mistake may have been a blessing in disguise as when me a craig were inspecting the panel we found that it had warped at some point during the welding process. This usually would not be a massive issue, but as it was right next to the windscreen, if the panel was misshapen it could cause problems with the fitment of the windscreen, or even worse the windscreen would fit, but there would be a pressure point which could possibly crack the screen. The glass on my car is very hard to come by, so I could not risk this. So we cut out the patch again, and redid the whole process. This time however I was much more careful with the grinding, and took my time to get the welds ground back to the original contour of the panel without going through again.
+
+!["My Fuck Up"](src\projects\WinRepImg\IMG_1744.jpg)
