@@ -7,7 +7,7 @@ img: src/car.jpg
 tags: "Car, Welding, Panel beating"
 ...
 
-# Introduction
+# Windscreen Rust Repair
 The rubber seal that is around the windscreen in my car had been perished since I bought the car, it was split, dry and not at all waterproof, so the car was practically unusable in the wet as the seal would leak water behind the back of my dashboard, right next to most of the electronics in the car.
 
 This is obviously not ideal, and so after i got my car back on the road after the engine swap, I decided to order another windscreen seal, and booked my car in for an appointment with [Novus Glass](https://www.novus.co.nz), as i thought that the professionals were less likely to break the glass, and it is hard to come by.
@@ -37,6 +37,16 @@ Tack welds were then used to hold the panel in place, and the panel was then ful
 
 !["Images of the Patch panel being welded in place"](src/projects/WinRepImg/IMG_1741.jpg)
 
-I began to grind off the weld using a belt sander, but I accidentally ground too much off in one spot and went through the panel. 5 hours of work was thrown down the gurgler in 30 seconds of overzealous grinding. To fix it would be a complete redo of the patch. I wanted to cry. However this mistake may have been a blessing in disguise as when me a craig were inspecting the panel we found that it had warped at some point during the welding process. This usually would not be a massive issue, but as it was right next to the windscreen, if the panel was misshapen it could cause problems with the fitment of the windscreen, or even worse the windscreen would fit, but there would be a pressure point which could possibly crack the screen. The glass on my car is very hard to come by, so I could not risk this. So we cut out the patch again, and redid the whole process. This time however I was much more careful with the grinding, and took my time to get the welds ground back to the original contour of the panel without going through again.
+I began to grind off the weld using a belt sander, but I accidentally ground too much off in one spot and went through the panel. 5 hours of work was thrown down the gurgler in 30 seconds of overzealous grinding. To fix it would be a complete redo of the patch. I wanted to cry. However this mistake may have been a blessing in disguise as when Craig and I were inspecting the panel, we found that it had warped at some point during the welding process. This usually would not be a massive issue, but as it was right next to the windscreen, if the panel was misshapen it could cause problems with the fitment of the windscreen, or even worse the windscreen would fit, but there would be a pressure point which could possibly crack the screen. The glass on my car is very hard to come by, so I could not risk this. 
 
-!["My Fuck Up"](src\projects\WinRepImg\IMG_1744.jpg)
+!["My Fuck Up"](src/projects/WinRepImg/IMG_1744.jpg)
+
+So we cut out the patch again, and redid the whole process. This time however I was much more careful with the grinding, and took my time to get the welds ground back to the original contour of the panel without going through again, and during welding I made sure to keep the heat input low to avoid warping, and to also fix any warpage that may have occurred between welds using the hammer.
+
+!["Images of the Final Repair"](src/projects/WinRepImg/IMG_1745.jpeg)
+
+After the welding, the panel was ground back using a belt sander to the original contour, and then finished using high grit sandpaper. The area was then painted using two coats of an epoxy based paint to ensure a durable and rust-resistant finish.
+
+!["Images of the Final Paint Job"](src/projects/WinRepImg/IMG_1749.jpeg)
+
+The car was then returned to Novus for reinstallation of the windscreen, and after that, it was ready to hit the road again. The whole process took about 10 hours of work spread over two days, and I learnt a lot about panel beating and welding in the process. Overall I am very happy with how the repair turned out, and it was a great learning experience.
