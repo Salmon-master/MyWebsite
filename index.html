@@ -4,7 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="description" content="Hugh Thompson - Engineering student at University of Canterbury. Passionate about problem solving, software development, electronics, and game design.">
+    <meta name="keywords" content="Hugh Thompson, Engineering, Software Development, University of Canterbury, Portfolio">
+    <meta name="author" content="Hugh Thompson">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hugh Thompson - Portfolio">
+    <meta property="og:description" content="Engineering student at University of Canterbury. Passionate about problem solving and creating.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hugh Thompson - Portfolio">
+    <meta name="twitter:description" content="Engineering student at University of Canterbury. Passionate about problem solving and creating.">
+    
+    <title>Hugh Thompson - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -18,49 +32,45 @@
 </head>
 
 <body>
-    <div class="header">
+    <header class="header" role="banner">
         <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+            <div class="progress-bar" id="myBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
         </div>
-    </div>
-    <div>
-        <div class="navbar">
-            <div class="menu-btn" onclick="onToggle()">
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-            </div>
-            <a href="index.html" class="logo menu-item">Hugh Thompson</a>
-            <a href="blog.html" class="menu-item">Blog</a>
-            <a href="contact.html" class="menu-item">Contact</a>
+    </header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <button class="menu-btn" onclick="onToggle()" aria-label="Toggle navigation menu" aria-expanded="false" id="menu-toggle">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </button>
+        <a href="index.html" class="logo menu-item" aria-current="page">Hugh Thompson</a>
+        <a href="blog.html" class="menu-item">Blog</a>
+        <a href="contact.html" class="menu-item">Contact</a>
+    </nav>
+
+    <main class="parallax" id="parallax">
+        <div class="background">
+            <h1 class="statement">Hi,<br> I'm Hugh Thompson</h1>
+        </div>
+        <div class="subtitle foreground subtitle-position">
+            <p><i class="scroll-down" id="arrow" aria-label="Scroll down indicator"></i></p>
         </div>
 
-        <div class="parallax" id="parallax">
-            <div class="background">
-                <h1 class="statement">Hi,<br> I'm Hugh Thompson</h1>
+        <section class="info_block foreground info-block-position" aria-label="About section">
+            <div class="content-wrapper">
 
-            </div>
-            <div class="subtitle foreground" style="top : 85vh;">
-                <p><i class="scroll-down" id="arrow"></i></p>
-            </div>
-
-
-
-            <div class="info_block foreground" style="top: 90vh;">
-                <div style="width: 70vw; margin: auto;">
-
-                    <div class="flex_row">
-                        <img src="src/headshot.jpeg" alt="A business headhsot of Hugh Thompson"
-                            style="max-width: 270px; grid-column: span 1; object-fit: cover; height: 450px;">
-                        <div>
-                            <h2>About Me</h2>
+                <div class="flex_row">
+                    <img src="src/headshot.jpeg" alt="A business headshot of Hugh Thompson"
+                        class="headshot-image" loading="lazy">
+                    <div>
+                        <h2>About Me</h2>
                             <p>
                                 I'm a University student studying Engineering at the University of Canterbury and
                                 I have an insatiable thirst for knowledge of all kinds. <br>
                                 I love problem solving and tinkering in all areas from software development to
                                 electronics and hardware, game design to fixing <a
-                                    href="https://my-website-sooty-kappa.vercel.app/project_skeleton.html?project_id=Triumph">my
-                                    car</a> .
+                                    href="https://my-website-sooty-kappa.vercel.app/project_skeleton.html?project_id=Triumph"
+                                    target="_blank" rel="noopener noreferrer">my car</a>.
                             </p>
                             <blockquote>
                                 "A jack of all trades is a master of none, but oftentimes better than a master of one."
@@ -70,148 +80,172 @@
                                 satisfaction of seeing my hard work pay off into something I have created, whatever the
                                 area.
                             </p>
-                            <ul class="workingon">
-                                <li>
-                                    Currently working on : <a id="project_link"></a> <span id="current-project"></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex_row">
-
-                        <div class="block">
-                            <h3>My favorite song:</h3>
-                            <iframe data-testid="embed-iframe" style="border-radius:12px"
-                                src="https://open.spotify.com/embed/track/6GsP3uMCd0Dn5T37C93waZ?utm_source=generator"
-                                width="100%" height="100%" frameBorder="0" allowfullscreen=""
-                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                                loading="lazy"></iframe>
-                        </div>
-                        <div class="block">
-                            <h3>A hill I will die on:</h3>
-                            <p>
-                                The asterisk symbol when you declare a pointer in C++ should be placed next to the type,
-                                not
-                                the variable name. For example, <code>int* ptr;</code> is correct, while
-                                <code>int *ptr;</code>
-                                is
-                                not.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="block">
-                        <h3>
-                            Employment History
-                        </h3>
-                        <ul class="employment-list">
-                            <li>
-                                <strong>Front of House Staff</strong> at <a
-                                    href="https://mediterraneanfoods.co.nz">Mediterranean Foods</a> (2022 - 2024)
-
-                            </li>
-                            <li>
-                                <strong>Service Attendant</strong> at Catering Plus (2021 - 2024)
-
-                            </li>
-
+                        <p class="workingon">
+                        
+                                Currently working on : <a id="project_link" href="#" aria-label="Current project repository"></a> <span id="current-project"></span>
+                            
+                        </p>
                     </div>
                 </div>
-
-
-                <div class="footer">
-                    <div class="footer-icons">
-                        <a href="https://www.linkedin.com/in/hugh-bill"><img src="src\InBug-White.png"
-                                alt="LinkedIn Logo" class="footer-logo"><a>
-                                <a href="https://github.com/Salmon-master"><img src="src/github-mark-white.png"
-                                        alt="GitHub Logo" class="footer-logo"></a>
-                                <a href="mailto:hugh.bill@icloud.com"><img src="src/icons8-email-96.png" alt="mail icon"
-                                        class="footer-logo"></a>
-                    </div>
-                    <p style="font-size: 0.8rem;">&copy; 2025 <a href="index.html">Hugh Thompson</a>. All rights
-                        reserved.</p>
+                <div class="flex_row">
+                    <article class="block">
+                        <h3>My favorite song:</h3>
+                        <iframe data-testid="embed-iframe" class="spotify-embed"
+                            src="https://open.spotify.com/embed/track/6GsP3uMCd0Dn5T37C93waZ?utm_source=generator"
+                            width="100%" height="100%" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy" title="Spotify embed - Favorite song"></iframe>
+                    </article>
+                    <article class="block">
+                        <h3>A hill I will die on:</h3>
+                        <p>
+                            The asterisk symbol when you declare a pointer in C++ should be placed next to the type,
+                            not the variable name. For example, <code>int* ptr;</code> is correct, while
+                            <code>int *ptr;</code> is not.
+                        </p>
+                    </article>
                 </div>
+                <section class="block">
+                    <h3>Employment History</h3>
+                    <ul class="employment-list">
+                        <li>
+                            <strong>Front of House Staff</strong> at <a
+                                href="https://mediterraneanfoods.co.nz" target="_blank" rel="noopener noreferrer">Mediterranean Foods</a> (2022 - 2024)
+                        </li>
+                        <li>
+                            <strong>Service Attendant</strong> at Catering Plus (2021 - 2024)
+                        </li>
+                    </ul>
+                </section>
             </div>
 
-        </div>
-    </div>
+
+            <footer class="footer" role="contentinfo">
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/hugh-bill" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                        <img src="src/InBug-White.png" alt="LinkedIn Logo" class="footer-logo">
+                    </a>
+                    <a href="https://github.com/Salmon-master" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                        <img src="src/github-mark-white.png" alt="GitHub Logo" class="footer-logo">
+                    </a>
+                    <a href="mailto:hugh.bill@icloud.com" aria-label="Send me an email">
+                        <img src="src/icons8-email-96.png" alt="Email icon" class="footer-logo">
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2025 <a href="index.html">Hugh Thompson</a>. All rights reserved.</p>
+            </footer>
+        </section>
+    </main>
 </body>
 <script src="index.js" type="module"></script>
 <script>
+    // GitHub API integration for displaying latest project
+    (function() {
+        'use strict';
 
-    function timeAgo(dateString) {
-        const now = new Date();
-        const past = new Date(dateString);
-        const diffInSeconds = Math.floor((now - past) / 1000);
+        function timeAgo(dateString) {
+            const now = new Date();
+            const past = new Date(dateString);
+            const diffInSeconds = Math.floor((now - past) / 1000);
 
-        const intervals = [
-            { label: "year", seconds: 31536000 },
-            { label: "month", seconds: 2592000 },
-            { label: "day", seconds: 86400 },
-            { label: "hour", seconds: 3600 },
-            { label: "minute", seconds: 60 },
-            { label: "second", seconds: 1 },
-        ];
+            const intervals = [
+                { label: "year", seconds: 31536000 },
+                { label: "month", seconds: 2592000 },
+                { label: "day", seconds: 86400 },
+                { label: "hour", seconds: 3600 },
+                { label: "minute", seconds: 60 },
+                { label: "second", seconds: 1 },
+            ];
 
-        for (const interval of intervals) {
-            const count = Math.floor(diffInSeconds / interval.seconds);
-            if (count >= 1) {
-                return `${count} ${interval.label}${count > 1 ? "s" : ""} ago`;
+            for (const interval of intervals) {
+                const count = Math.floor(diffInSeconds / interval.seconds);
+                if (count >= 1) {
+                    return `${count} ${interval.label}${count > 1 ? "s" : ""} ago`;
+                }
+            }
+
+            return "just now";
+        }
+
+        function formatNiceDate(dateString) {
+            const date = new Date(dateString);
+            return new Intl.DateTimeFormat("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit",
+                hour12: true,
+            }).format(date);
+        }
+
+        async function getLastPublicRepoCommitWithFormattedTime(username) {
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/events/public`);
+
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch public events for ${username}`);
+                }
+
+                const events = await response.json();
+                const pushEvent = events.find(event => event.type === "PushEvent");
+
+                if (!pushEvent) {
+                    throw new Error(`No recent public commits found for ${username}`);
+                }
+
+                const repoName = pushEvent.repo.name;
+                const commit = pushEvent.payload.commits?.[0];
+                const timestamp = commit?.timestamp || pushEvent.created_at;
+
+                return {
+                    repo: repoName,
+                    exactTime: formatNiceDate(timestamp),
+                    relativeTime: timeAgo(timestamp)
+                };
+            } catch (error) {
+                console.error("Error fetching GitHub data:", error);
+                throw error;
             }
         }
 
-        return "just now";
-    }
-
-    function formatNiceDate(dateString) {
-        const date = new Date(dateString);
-        return new Intl.DateTimeFormat("en-US", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-            hour12: true,
-        }).format(date);
-    }
-
-    async function getLastPublicRepoCommitWithFormattedTime(username) {
-        const response = await fetch(`https://api.github.com/users/${username}/events/public`);
-
-        if (!response.ok) {
-            throw new Error(`Failed to fetch public events for ${username}`);
-        }
-
-        const events = await response.json();
-        const pushEvent = events.find(event => event.type === "PushEvent");
-
-        if (!pushEvent) {
-            throw new Error(`No recent public commits found for ${username}`);
-        }
-
-        const repoName = pushEvent.repo.name;
-        const commit = pushEvent.payload.commits?.[0];
-        const timestamp = commit?.timestamp || pushEvent.created_at;
-
-        return {
-            repo: repoName,
-            exactTime: formatNiceDate(timestamp),
-            relativeTime: timeAgo(timestamp)
+        // Update menu toggle aria-expanded attribute
+        const originalOnToggle = window.onToggle;
+        window.onToggle = function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            if (menuToggle) {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+            }
+            if (originalOnToggle) {
+                originalOnToggle();
+            }
         };
-    }
 
-    // `https://api.github.com/users/Salmon-master/events/public`
-    // Example usage
-    getLastPublicRepoCommitWithFormattedTime("Salmon-master")
-        .then(data => {
-            console.log(`Last commit to ${data.repo}`);
-            console.log(`Time: (${data.relativeTime})`);
-            document.getElementById("project_link").href = `https://github.com/` + data.repo;
-            document.getElementById("project_link").innerText = ` ${data.repo}`;
-            document.getElementById("current-project").innerText = ` (${data.relativeTime})`;
-        })
-        .catch(err => console.error("Error:", err.message));
-
+        // Load GitHub project information
+        getLastPublicRepoCommitWithFormattedTime("Salmon-master")
+            .then(data => {
+                const projectLink = document.getElementById("project_link");
+                const currentProject = document.getElementById("current-project");
+                
+                if (projectLink && currentProject) {
+                    projectLink.href = `https://github.com/${data.repo}`;
+                    projectLink.textContent = data.repo;
+                    projectLink.setAttribute('target', '_blank');
+                    projectLink.setAttribute('rel', 'noopener noreferrer');
+                    currentProject.textContent = ` (${data.relativeTime})`;
+                }
+            })
+            .catch(err => {
+                console.error("Error loading project information:", err.message);
+                const projectLink = document.getElementById("project_link");
+                if (projectLink) {
+                    projectLink.textContent = "GitHub";
+                    projectLink.href = "https://github.com/Salmon-master";
+                }
+            });
+    })();
 </script>
 
 </html>
