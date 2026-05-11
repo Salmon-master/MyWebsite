@@ -7,3 +7,5 @@ img: https://www.saasathon.dev/opengraph-image.png?opengraph-image.14hr0z0~h9cff
 tags: "Lumin, SaaS, Hackathon"
 ...
 # SaaSathon
+The first ever SaaSathon was the brainchild of my good friend [Justus 
+Huneke](https://www.linkedin.com/in/justus-huneke/)
