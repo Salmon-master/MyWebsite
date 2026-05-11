@@ -87,36 +87,68 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex_row">
+                <div class="flex_row" style="align-items: stretch; gap: 2rem; margin: 2rem 0;">
                     <article class="block">
-                        <h3>My favorite song:</h3>
+                        <h3 style="border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">My favorite song:</h3>
                         <iframe data-testid="embed-iframe" class="spotify-embed"
                             src="https://open.spotify.com/embed/track/6GsP3uMCd0Dn5T37C93waZ?utm_source=generator"
                             width="100%" height="100%" frameBorder="0" allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy" title="Spotify embed - Favorite song"></iframe>
+                            loading="lazy" title="Spotify embed - Favorite song" style="flex-grow: 1; border-radius: 8px;"></iframe>
                     </article>
                     <article class="block">
-                        <h3>A hill I will die on:</h3>
-                        <p>
+                        <h3 style="border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">A hill I will die on:</h3>
+                        <p style="margin-top: 0; line-height: 1.6;">
                             The asterisk symbol when you declare a pointer in C++ should be placed next to the type,
                             not the variable name. For example, <code>int* ptr;</code> is correct, while
                             <code>int *ptr;</code> is not.
                         </p>
                     </article>
                 </div>
-                <section class="block">
-                    <h3>Employment History</h3>
-                    <ul class="employment-list">
-                        <li>
-                            <strong>Front of House Staff</strong> at <a
-                                href="https://mediterraneanfoods.co.nz" target="_blank" rel="noopener noreferrer">Mediterranean Foods</a> (2022 - 2024)
-                        </li>
-                        <li>
-                            <strong>Service Attendant</strong> at Catering Plus (2021 - 2024)
-                        </li>
-                    </ul>
-                </section>
+                <div class="flex_row" style="align-items: stretch; gap: 2rem; margin: 2rem 0;">
+                    <section class="block employment-section scroll-hidden">
+                        <h3 style="border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">Employment History</h3>
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <strong>Summer Intern</strong> at <a href="https://www.luminpdf.com" target="_blank" rel="noopener noreferrer">Lumin PDF</a>
+                                    </div>
+                                    <div class="timeline-date">2025-2026</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <strong>Front of House Staff</strong> at <a href="https://mediterraneanfoods.co.nz" target="_blank" rel="noopener noreferrer">Mediterranean Foods</a>
+                                    </div>
+                                    <div class="timeline-date">2022 - 2024</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <strong>Service Attendant</strong> at Catering Plus
+                                    </div>
+                                    <div class="timeline-date">2021 - 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <article class="block scroll-hidden">
+                        <h3 style="border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">Featured Blog Post</h3>
+                        
+                        <div style="background: rgba(0, 0, 0, 0.2); border-left: 4px solid var(--accent); padding: 1.2rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; flex-grow: 1;">
+                            <h4 style="margin-top: 0; margin-bottom: 0.5rem;"><a id="featured-post-link" href="blog.html" style="color: var(--accent); text-decoration: none; font-size: 1.2rem;">Loading...</a></h4>
+                            <p id="featured-post-desc" style="color: var(--text-light); line-height: 1.5; margin-bottom: 0;"></p>
+                        </div>
+
+                        <a href="blog.html" style="margin-top: auto; color: var(--accent); font-weight: bold; text-decoration: none; font-size: 0.9rem;">View All Posts &rarr;</a>
+                    </article>
+                </div>
             </div>
 
 
@@ -137,6 +169,39 @@
         </section>
     </main>
 </body>
+<script type="module">
+    import Project from './project_class.js';
+
+    async function loadFeaturedPost() {
+        try {
+            const response = await fetch("https://my-website-sooty-kappa.vercel.app/api/projects");
+            if (!response.ok) throw new Error("Failed to load featured post");
+            
+            const files = await response.json();
+            
+            const projects = files.map(file => {
+                return new Project(file.slice(0, -3));
+            });
+            
+            const sortedProjects = projects.sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
+            const latestPost = sortedProjects[0];
+
+            if (latestPost && latestPost.meta) {
+                const titleLink = document.getElementById("featured-post-link");
+                const desc = document.getElementById("featured-post-desc");
+                
+                titleLink.textContent = latestPost.meta.title;
+                titleLink.href = `project_skeleton.html?project_id=${latestPost.meta.id}`;
+                desc.textContent = latestPost.meta.description;
+            }
+        } catch (error) {
+            console.error("Error fetching latest post:", error);
+            document.getElementById("featured-post-link").textContent = "Check out my latest updates!";
+        }
+    }
+
+    loadFeaturedPost();
+</script>
 <script src="index.js" type="module"></script>
 <script>
     // GitHub API integration for displaying latest project
@@ -247,5 +312,26 @@
             });
     })();
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // trigger when 10% visible
+        };
 
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-hidden').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
 </html>
