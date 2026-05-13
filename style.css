@@ -109,19 +109,22 @@ li {
 }
 
 p a, li a,
-.workingon li a {
+.workingon li a, 
+.timeline-header a{
     position: relative;
     color: var(--link);
     text-decoration: none;
 }
 
 p a:hover, li a:hover,
-.workingon li a:hover {
+.workingon li a:hover ,
+.timeline-header a:hover {
     color: color-mix(in srgb, var(--link), black 10%);
 }
 
 p a::before, li a::before,
-.workingon li a::before {
+.workingon li a::before ,
+.timeline-header a::before{
     content: "";
     position: absolute;
     display: block;
@@ -136,7 +139,8 @@ p a::before, li a::before,
 }
 
 p a:hover::before, li a:hover::before,
-.workingon li a:hover::before {
+.workingon li a:hover::before ,
+.timeline-header a:hover::before{
     transform: scaleX(1);
     background-color: var(--primary);
 }
@@ -176,7 +180,7 @@ p {
     font-size: 1.2rem;
     color: var(--text-muted);
     font-weight: 300;
-    display: inline-block;
+    display: block;
     line-height: 2.1rem;
     margin: 0.5rem 0;
 }
@@ -229,15 +233,7 @@ p {
 }
 
 
-iframe {
-    border: none;
-    border-radius: 10px;
-    margin-top: auto;
-    margin-bottom: 0;
-    flex-shrink: 0;
-    min-height: 70vh;
-    width: 100%;
-}
+
 
 .title {
     display: flex;
@@ -355,7 +351,7 @@ img {
 
 .button {
     background-color: var(--bg-light);
-    color: var(--bg-dark);
+    color: var(--text);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -773,6 +769,9 @@ blockquote{
         margin-left: 0;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .footer-icons a {
+        all: none;
     }
 
     .footer-icons img {

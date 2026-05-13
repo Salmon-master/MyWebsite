@@ -14,7 +14,7 @@ This is obviously not ideal, and so after i got my car back on the road after th
 
 I got a call form them halfway through the appointment however, saying that when they had taken out my windscreen, they had discoverd rust holes in the bit of the bulkhead surrounding the windscreen (see photos below).
 
-!["Images of the rust in the car"](src/projects/WinRepImg/Rust.png)
+!["Images of the rust in the car"](src/projects/WinRepImg/Rust.png) *Rust in the car*
 
 What had been happening was the seal, due to its perished condition was letting moisture through to the bulkhead, and then the seal was just good enough to trap this moisture in the low points of the windscreen surround, and rusting these out.
 
@@ -22,11 +22,11 @@ I called up Craig Erikson, the man who teaches the [weekend panelbeating](https:
 
 The first step was to mask off the area to protect the paint, and then clean up the area around the rust with a wire wheel back to bear metal to identify what exactly we were working with. As seen below, the water had gotten in through the main rust holes and then rusted the metal about from the back, creating more holes than were original visible.
 
-!["Images of the Rust after cleaning up"](src/projects/WinRepImg/cleaned.png)
+!["Images of the Rust after cleaning up"](src/projects/WinRepImg/cleaned.png) *Rust after cleaning up*
 
 A patch panel was then formed out of some 1 mm sheet metal using the shrinker stretcher, and the panel was then formed to the exact shape needed using a hammer and body spoon using the existing panel as a template. The rust holes were then cut out of the car, and there areas behind inspected and cleaned, and the sprayed with some black zinc to help prevent future rust.
 
-!["Images of the Patch panel being formed"](src/projects/WinRepImg/IMG_1738.jpg)
+!["Images of the Patch panel being formed"](src/projects/WinRepImg/IMG_1738.jpg) *Patch panel being formed*
 
 The patch was then fitted into the hole, and given some final forming alterations using the hammer. It was then welded in place using a TIG (Tungsten Inert Gas) welder. A TIG was used due to the a couple main reasons:
 * A TIG has a relatively small amount of heat input compared to something like a gas welding plant, which minimises warping of the surrounding metal.
@@ -35,18 +35,18 @@ The patch was then fitted into the hole, and given some final forming alteration
 
 Tack welds were then used to hold the panel in place, and the panel was then full welded into place. Along the back of the panel, where it was attached to the existing bulkhead skin, holes were punched into the panel and then the panel was plug welded to the existing skin to ensure a strong bond. The rest of the welds were butt welds, but with much more filler rod then normal so that the weld could be ground back to the original contour of the panel.
 
-!["Images of the Patch panel being welded in place"](src/projects/WinRepImg/IMG_1741.jpg)
+!["Images of the Patch panel being welded in place"](src/projects/WinRepImg/IMG_1741.jpg) *From left to right, final panel fit, tack welds and final welding*
 
 I began to grind off the weld using a belt sander, but I accidentally ground too much off in one spot and went through the panel. 5 hours of work was thrown down the gurgler in 30 seconds of overzealous grinding. To fix it would be a complete redo of the patch. I wanted to cry. However this mistake may have been a blessing in disguise as when Craig and I were inspecting the panel, we found that it had warped at some point during the welding process. This usually would not be a massive issue, but as it was right next to the windscreen, if the panel was misshapen it could cause problems with the fitment of the windscreen, or even worse the windscreen would fit, but there would be a pressure point which could possibly crack the screen. The glass on my car is very hard to come by, so I could not risk this. 
 
-!["My Fuck Up"](src/projects/WinRepImg/IMG_1744.jpg)
+!["My Fuck Up"](src/projects/WinRepImg/IMG_1744.jpg) *Belt sander lessons*
 
 So we cut out the patch again, and redid the whole process. This time however I was much more careful with the grinding, and took my time to get the welds ground back to the original contour of the panel without going through again, and during welding I made sure to keep the heat input low to avoid warping, and to also fix any warpage that may have occurred between welds using the hammer.
 
-!["Images of the Final Repair"](src/projects/WinRepImg/IMG_1745.jpeg)
+!["Images of the Final Repair"](src/projects/WinRepImg/IMG_1745.jpeg) *The final repair, from left to right: Black zinc anti-rust coating, new panel fit and welding in the new panel*
 
 After the welding, the panel was ground back using a belt sander to the original contour, and then finished using high grit sandpaper. The area was then painted using two coats of an epoxy based paint to ensure a durable and rust-resistant finish.
 
-!["Images of the Final Paint Job"](src/projects/WinRepImg/IMG_1749.jpeg)
+!["Images of the Final Paint Job"](src/projects/WinRepImg/IMG_1749.jpeg) *Finishing the repair, from left to right: 1&2 clean up with belt sander and paint job*
 
 The car was then returned to Novus for reinstallation of the windscreen, and after that, it was ready to hit the road again. The whole process took about 10 hours of work spread over two days, and I learnt a lot about panel beating and welding in the process. Overall I am very happy with how the repair turned out, and it was a great learning experience.
