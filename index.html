@@ -207,7 +207,7 @@
 
     async function loadFeaturedPost() {
         try {
-            const response = await fetch("https://my-website-sooty-kappa.vercel.app/api/projects");
+            const response = await fetch("/api/projects");
             if (!response.ok) throw new Error("Failed to load featured post");
 
             const files = await response.json();
