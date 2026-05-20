@@ -51,6 +51,24 @@
         display: block;
         margin: 0 auto;
     }
+    td{
+        padding: 15px;
+        margin: 0;
+        /* border: 1px solid var(--border); */
+        color: var(--text-muted);
+        background-color: var(--bg-light);
+    }
+    th{
+        padding: 15px;
+        margin: 0;
+        border-bottom: 1px solid var(--border);
+        background-color: var(--primary);
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+    }
 </style>
 
 <body>
@@ -72,10 +90,10 @@
             <a href="contact.html" class="menu-item">Contact</a>
         </div>
 
-        <div class="main-body">
+        <div class="main-body" style="max-width: 900px; margin: auto;">
             <a href="blog.html" class="button">Back</a>
             <hr>
-            <div id="content" style="padding: 20px;">
+            <div id="content" style="padding: 80px;">
 
             </div>
 
