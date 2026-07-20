@@ -16,5 +16,6 @@ I suggested to Caleb that it would be great to have a website that a business co
 
 @[KiwiStack](https://www.kiwistack.co.nz) *Kiwistack Website*
 
-
 The site is built using nextjs, tailwind css and typescript, and is hosted on vercel. The data is stored on supabase, and the search is powered by open AI's chat GPT and firecrawl. A user searches a new website, it scrapes the site using firecrawl, and then uses chat GPT to match to a curated database of NZ software companies. This search is then cached in supabase for future use.
+
+Note, the supabase for this project has been paused, so currently functionally it will not work.
