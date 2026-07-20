@@ -1,5 +1,5 @@
 ---
-title: Kiwistack
+title: KiwiStack
 description: The App that connects New Zealand Software companies to New Zealand businesses and the world.
 date: 11/05/2026
 id: KiwiStack
